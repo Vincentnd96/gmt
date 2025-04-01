@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMT Time App</title>
+</head>
+<body>
+    <h1>Welcome to the GMT Time App</h1>
+    <p>The current GMT time is:</p>
+    <div id="gmt-time"></div>
+
+    <script>
+        // JavaScript to display the current GMT time
+        function updateGMTTime() {
+            const now = new Date();
+            const gmtTime = now.toUTCString();
+            document.getElementById('gmt-time').innerText = gmtTime;
+        }
+
+        // Update the GMT time every second
+        setInterval(updateGMTTime, 1000);
+        updateGMTTime(); // Initial call to display time immediately
+    </script>
+</body>
+</html>
